@@ -1,0 +1,144 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --color1:rgb(29, 17, 37);
+    --color2:rgb(42, 20, 60);
+    --color3:rgb(113, 75, 145);
+}
+
+body{
+    width:100vw;
+    background-color:var(--color2);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Helvetica;
+    height: 100vh;
+}
+
+header
+{
+color:snow;
+display: flex;
+justify-content: flex-end;
+padding: 10px 30px;
+width: 100%;
+}
+
+header input#search{
+    border:0;
+    padding:7px;
+    border-radius: 5px;
+background-color: var(--color1);
+color: var(--color3);
+}
+
+header input#search:focus
+{
+    outline: 0
+}
+
+.main
+{
+    display: flex;
+    flex-flow: row wrap;
+    width:100%;
+    justify-content: space-evenly;
+    background-color: var(--color1);
+    padding-top: 50px;
+flex-grow: 1;
+}
+
+.movie
+{
+    width:200px;
+    height: 250px;
+background-color: aliceblue;
+margin: 20px;
+border-radius: 5px;
+overflow: hidden;
+position: relative;
+}
+
+.movie .info
+{
+    position: relative;
+width: 100%;
+height: 100%;
+}
+
+.movie img
+{
+    width:100%;
+    height:100% ;
+}
+
+.movie .info h4
+{
+    position: absolute;
+    bottom: 0;
+background-color: #4e094691;
+width: 100%;
+padding: 5px;
+color: seashell;
+text-align: center;
+
+}
+
+.movie .info span
+{
+    position: absolute;
+    top : 5px;
+right: 5px;
+font-size: 16px;
+font-weight: bold;
+padding: 5px;
+border-radius: 20%;
+color:var(--color1);
+width: 35px;
+text-align: center;
+
+}
+
+.movie .info span.green
+{
+    background-color: rgba(144, 238, 144, 0.678);
+}
+
+.movie .info span.red
+{
+    background-color: rgba(240, 113, 113, 0.747);
+}
+
+.movie .info span.yellow
+{
+    background-color: rgba(255, 242, 62, 0.678);
+}
+
+.movie .breif
+{
+position: absolute;
+height: 100%;
+width: 100%;
+color: white;
+top: 0;
+left: 0;
+background: ;
+background-color: #502767e6;
+padding: 10px 15px;
+font-size: 13px;
+transform: translateY(101%);
+transition: transform 0.7s ease-out;
+}
+
+.movie:hover .breif
+{
+    transform:translateY(20%);
+}
